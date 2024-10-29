@@ -1,6 +1,6 @@
+import { FirstScene } from '@src/tutorials/scene/first-scence';
 import { FC } from 'react';
-import { DrawingLines } from '../tutorials/scene/drawing-lines';
 
 export const App: FC = () => {
-  return <DrawingLines />;
+  return <FirstScene />;
 };

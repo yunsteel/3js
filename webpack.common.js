@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: 'src/index.tsx',
+  entry: './src/index.tsx',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -12,10 +12,10 @@ module.exports = {
 
   // 모듈 해석 방식 결정
   resolve: {
-    // alias: {
-    //   '@src': path.resolve(__dirname, 'src/'),
-    // },
-    extensions: ['.ts', '.tsx', '.js', '.jsx'], // 해석 순서
+    alias: {
+      '@src': path.resolve(__dirname, 'src'),
+    },
+    extensions: ['', '.tsx', '.ts', '.js', '.jsx'], // 해석 순서
   },
   module: {
     rules: [
